@@ -10,9 +10,9 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class DefaultController extends AbstractController
 {
-    #[Route('/', name: 'app_default')]
+    #[Route('/', name: 'blog_default')]
     public function index(BlogRepository $blogRepository, EntityManagerInterface $manager): Response
     {
-        return $this->render('index.html.twig');
+        return new Response();
     }
 }
